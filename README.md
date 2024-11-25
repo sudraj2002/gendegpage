@@ -1,2 +1,2 @@
-# AWRaCle project page
-Project page for AWRaCLe
+# GenDeg project page
+Project page for GenDeg
