@@ -64,13 +64,19 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-2 publication-title"> <i>AWRaCLe</i> : All-Weather Image Restoration using Visual In-Context Learning
+                        <h1 class="title is-2 publication-title"> GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration
                         </h1>
-                        <div class="is-size-5 publication-authors">
+                        <div class="is-size-4 publication-authors">
                             <!-- Group of first four authors -->
                             <div class="authors-group">
                                 <span class="author-block">
                                     <a href="https://scholar.google.com/citations?user=SGty2eUAAAAJ&hl=en" target="_blank">Sudarshan Rajagopalan</a>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://nithin-gk.github.io/" target="_blank">Nithin Gopalakrishnan Nair</a>,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://jayparanjape.github.io/website/" target="_blank">Jay N. Paranjape</a>,
                                 </span>
                                 <span class="author-block">
                                     <a href="https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en"
@@ -80,7 +86,7 @@
                         </div>
 
 
-                        <div class="is-size-5 publication-authors">
+                        <div class="is-size-4 publication-authors">
                             <span class="author-block">Johns Hopkins University</span>
                         </div>
 
@@ -151,20 +157,25 @@
                     <img src="./static/images/intro.png" alt="" style="border:0; height:500px; width:1500px;">
                         <div class="content has-text-justified">
                         <p>
-                          Illustration of AWRaCLe: Our visual in-context learning approach for all-weather image restoration. Given a context pair (first two rows), AWRaCLe extracts 
-                          relevant degradation context from it to restore a query image. Our method also performs selective removal of haze and snow from an image containing their mixture as shown in (d) and (e).
+                          
                         </p>
                         </div>
                     <h2 class="title is-3">Abstract</h2>
                     
                     <div class="content has-text-justified">
                         <p>
-                            We tackle the challenging task of All-Weather Image Restoration (AWIR) under adverse weather conditions. Prior works do not utilize degradation-specific visual contextual guidance during training. Consequently, their performance is
-                            limited by the degradation cues that are learnt from individual training samples.  We propose <b>A</b>ll-<b>W</b>eather Image <b>R</b>estor<b>a</b>tion using Visual In-<b>C</b>ontext <b>Le</b>arning 
-                            (AWRaCLe), a novel approach for AWIR which leverages degradation-specific visual context information as a prior to enhance the restoration performance. Our approach incorporates Degradation Context Extraction (DCE) and Context Fusion (CF) to seamlessly integrate degradation-specific features from the context 
-                            into an image restoration network. 
-                            The proposed DCE and CF modules leverage CLIP features and incorporate attention mechanisms to adeptly learn and fuse contextual information.  
-                            AWRaCLe achieves state-of-the-art performance on standard all-weather image restoration benchmarks.
+                            Deep learning–based models for All-In-One image Restoration (AIOR) have achieved significant advancements in recent years. 
+                            However, their practical applicability is limited by poor generalization to samples outside the training distribution. 
+                            This limitation arises primarily from insufficient diversity in degradation variations and scenes within existing datasets, 
+                            resulting in inadequate representations of real-world scenarios. 
+                            Additionally, capturing large-scale real-world paired data for degradations such as haze, low-light, and raindrops is often cumbersome and sometimes infeasible. 
+                            In this paper, we leverage the generative capabilities of latent diffusion models to synthesize high-quality degraded images from their clean counterparts. 
+                            Specifically, we introduce GenDeg, a degradation and intensity-aware conditional diffusion model, capable of producing diverse degradation patterns on clean images. 
+                            Using GenDeg, we synthesize over 550k samples across six degradation types: haze, rain, snow, motion blur, low-light, and raindrops. 
+                            These generated samples are integrated with existing datasets to form the GenDS dataset, comprising over 750k samples. 
+                            Our experiments reveal that image restoration models trained on GenDS dataset exhibit significant improvements in out-of-distribution 
+                            performance as compared to when trained solely on existing datasets. 
+                            Furthermore, we provide comprehensive analyses on implications of diffusion model-based synthetic degradations for AIOR.
                         </p>
                     </div>
                 </div>
@@ -184,9 +195,8 @@
 
                                 <img src="./static/images/block.png" alt="" border=0 height=500 width=1500></img></
                                 <p>
-                                    AWRaCLe integrates degradation-specific information from a context pair to facilitate the image restoration process. 
-                                    Initially, CLIP features are extracted from the context pair and fed into Degradation Context Extraction (DCE) blocks at various levels of the decoder within the image restoration network. 
-                                    The Context Fusion (CF) blocks then fuse the degradation information obtained from the DCE blocks with the decoder features of the query image requiring restoration. Finally, the restored image is generated.
+                                    Illustration of our GenDeg framework: (a) Describes the training stage of our pipeline. (b) Shows the inference process for degradation generation. (c) Depicts the architecture of 
+                                    our Swin transformer-based restoration model.
                                 </p>
                             </div>
                         </div>
