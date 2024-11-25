@@ -154,10 +154,10 @@
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <img src="./static/images/intro.png" alt="" style="border:0; height:500px; width:1500px;">
+                    <img src="./static/images/intro_s.png" alt="" style="border:0; height:500px; width:1500px;">
                         <div class="content has-text-justified">
                         <p>
-                          
+                          Restoration models trained on our proposed GenDS dataset achieve better generalization performance on out-of-distribution datasets.
                         </p>
                         </div>
                     <h2 class="title is-3">Abstract</h2>
@@ -189,14 +189,35 @@
                     <!-- Abstract. -->
                     <div class="columns is-centered has-text-centered">
                         <div class="column is-four-fifths">
+                            <h2 class="title is-3">Motivation</h2>
+                            <div class="content has-text-justified proposed-approach">
+                                <h5 class="subtitle has-text-centered"></h5>
+
+                                <img src="./static/images/motivation.png" alt="" border=0 height=500 width=1500></img></
+                                <p>
+                                    Existing datasets are limited in size and lack scene diversity. Our GenDS dataset overcomes these challenges, as demonstrated in (a). 
+                                    Furthermore, the degradation patterns in GenDS dataset are highly diverse, bridging the gap between the degradation patterns in existing datasets and OoD datasets, as illustrated in (b).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
                             <h2 class="title is-3">Proposed Approach</h2>
                             <div class="content has-text-justified proposed-approach">
                                 <h5 class="subtitle has-text-centered"></h5>
 
                                 <img src="./static/images/block.png" alt="" border=0 height=500 width=1500></img></
                                 <p>
-                                    Illustration of our GenDeg framework: (a) Describes the training stage of our pipeline. (b) Shows the inference process for degradation generation. (c) Depicts the architecture of 
-                                    our Swin transformer-based restoration model.
+                                    Illustration of our GenDeg framework: (a) Describes the training stage of our pipeline. (b) Shows the inference process for degradation generation. (c) Depicts the 
+                                    architecture of our Swin transformer-based restoration model.
                                 </p>
                             </div>
                         </div>
@@ -213,41 +234,13 @@
                             <div class="content has-text-justified proposed-approach">
                                 <h5 class="subtitle has-text-centered"></h5>
                                 <img src="./static/images/table.png" alt="" border="0" height="500" width="1500">
-                                <p> Quantitative comparisons of AWRaCLe with state-of-the-art approaches on all-weather image restoration benchmarks. AWRaCLe achieves a significant improvement in performance
-                                over SOTA.</p>
+                                <p> Quantitative comparisons of restoration models using LPIPS and FID metrics (lower is better), trained with and without our GenDS dataset. Performance is evaluated on OoD test sets. 
+                                    The table also includes the performance of existing state-of-the-art (SOTA) approaches. 
+                                    Training with the GenDS dataset significantly enhances OoD performance. (R) indicates real images and (S) indicates synthetic images.</p>
                                 <img src="./static/images/qual.png" alt="" border="0" height="500" width="1500">
                                 <p>
-                                    Qualitative comparisons of AWRaCLe with state-of-the-art-approaches for dehazing, desnowing and deraining tasks.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--/ Paper video. -->
-
-        </div>
-    </section>
-
-    <section class="section">
-                <div class="container is-max-desktop">
-                    <!-- Abstract. -->
-                    <div class="columns is-centered has-text-centered">
-                        <div class="column is-four-fifths">
-                            <h2 class="title is-3">Analysis</h2>
-                            <div class="content has-text-justified proposed-approach">
-                                <h5 class="subtitle has-text-centered"></h5>
-                                <img src="./static/images/dce.png" alt="" border="0" height="500" width="1500">
-                                <p> DCE block activations overlayed on the degraded and clean image of the context pair. The DCE blocks capture attributes of degradations such
-                                    as the spatially varying characteristics of haze and sparseness of snow. Yellow-High, Blue-Low</p>
-                                <img src="./static/images/tsne.png" alt="" border="0" height="500" width="1500">
-                                <p>
-                                    t-SNE plot of DCE block outputs for hazy, rainy and snowy context pairs. The clusters are well separated.
-                                </p>
-                                
-                                <img src="./static/images/cf.png" alt="" border="0" height="500" width="1500">
-                                <p>
-                                    Comparison of activations of the restoration network prior to CF and after CF. After CF, the degradation information in the activation is significantly enhanced.
+                                    Qualitative comparisons of image restoration models trained with and without our GenDS dataset. 
+                                    The suffix GD represents training with the GenDS dataset. Zoomed-in patches are provided for viewing fine details.
                                 </p>
                             </div>
                         </div>
