@@ -30,7 +30,7 @@
         }
     </style>
 
-    <title>AWRaCLe</title>
+    <title>GenDeg</title>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -154,7 +154,7 @@
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <img src="./static/images/intro_s.png" alt="" style="border:0; height:500px; width:1500px;">
+                    <img src="./static/images/intro_website.png" alt="" style="border:0; height:500px; width:1500px;">
                         <div class="content has-text-justified">
                         <p>
                           Restoration models trained on our proposed GenDS dataset achieve better generalization performance on out-of-distribution datasets.
@@ -230,13 +230,35 @@
                     <!-- Abstract. -->
                     <div class="columns is-centered has-text-centered">
                         <div class="column is-four-fifths">
-                            <h2 class="title is-3">Results and Comparison</h2>
+                            <h2 class="title is-3">Quantitative Results</h2>
                             <div class="content has-text-justified proposed-approach">
                                 <h5 class="subtitle has-text-centered"></h5>
-                                <img src="./static/images/table.png" alt="" border="0" height="500" width="1500">
+                                
                                 <p> Quantitative comparisons of restoration models using LPIPS and FID metrics (lower is better), trained with and without our GenDS dataset. Performance is evaluated on OoD test sets. 
                                     The table also includes the performance of existing state-of-the-art (SOTA) approaches. 
-                                    Training with the GenDS dataset significantly enhances OoD performance. (R) indicates real images and (S) indicates synthetic images.</p>
+                                    Training with the GenDS dataset significantly enhances OoD performance. (R) indicates real images and (S) indicates synthetic images.
+                                </p>
+                                <img src="./static/images/table.png" alt="" border="0" height="500" width="1500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ Paper video. -->
+
+        </div>
+    </section>
+
+    
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">Qualitative Results</h2>
+                            <div class="content has-text-justified proposed-approach">
+                                <h5 class="subtitle has-text-centered"></h5>
+                                
                                 <img src="./static/images/qual.png" alt="" border="0" height="500" width="1500">
                                 <p>
                                     Qualitative comparisons of image restoration models trained with and without our GenDS dataset. 
